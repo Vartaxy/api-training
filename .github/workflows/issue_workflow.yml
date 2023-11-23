@@ -51,7 +51,6 @@ jobs:
         uses: ./.github/workflows/create_repo_workflow.yml
         with:
           repo-name: ${{ steps.generate_variables.outputs.result }}
-        secrets:
           temp-token: ${{ steps.get_workflow_token_target.outputs.token }}
 
       - name: Finish Workflow Comment
