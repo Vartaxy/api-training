@@ -8,6 +8,9 @@ jobs:
   handle-issue:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+    
       - name: Get Token for checkout target organization
         id: get_workflow_token_target
         uses: peter-murray/workflow-application-token-action@v2
