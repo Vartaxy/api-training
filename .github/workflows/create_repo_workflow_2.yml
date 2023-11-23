@@ -1,4 +1,4 @@
-name: Create Repository Workflow
+name: Create Repository Workflow 2
 
 on:
   workflow_call:
