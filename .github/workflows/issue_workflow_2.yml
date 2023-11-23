@@ -1,4 +1,4 @@
-name: Issue Triggered Workflow
+name: Issue Triggered Workflow 2
 
 on:
 	issues:
