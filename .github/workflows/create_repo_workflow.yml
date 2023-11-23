@@ -1,0 +1,26 @@
+name: Create Repository Workflow
+
+on:
+  workflow_call:
+    inputs:
+      repo-name:
+        required: True
+        type: string
+    secrets:
+      temp-token:
+        required: True
+
+jobs:
+  create-repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a new Repository
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.temp-token }}
+          script: |
+            const repoName = ${{ inputs.repo-name }};
+            // Logic to create a new repository
+            octokit.rest.repos.createForAuthenticatedUser({
+              repoName,
+            });
